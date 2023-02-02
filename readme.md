@@ -43,3 +43,7 @@ export class AppComponent {
     totalEstimate = 10;
     ctx = {estimate: this.totalEstimate};
 }
+
+**RESTA DA CAPIRE**
+Come fa il template della libreria di kendo a non aver un identificativo; 
+Come fa a capire quale è il context? Come faccio a trovare il corrispettivo ng-content che specifica il *ngTemplateOutlet ?
