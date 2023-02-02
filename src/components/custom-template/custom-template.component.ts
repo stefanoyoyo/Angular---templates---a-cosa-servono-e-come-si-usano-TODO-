@@ -10,7 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomTemplateComponent implements OnInit {
 
-  constructor() { }
+  totalEstimate = 10;
+
+  ctx = {estimate: this.totalEstimate};
+
+  constructor() { 
+    this.chnageLessonsNumber()
+  }
+
+  chnageLessonsNumber() {
+    setInterval(() => {
+      this.totalEstimate++; // Inutile
+      this.ctx.estimate++;
+    }, 2000)
+  }
 
   ngOnInit() {
   }

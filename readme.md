@@ -20,3 +20,10 @@ Credo che:
     suo componente il template che vuole, con i parametri specificati
 
 *Devo provare a capire se è così per davvero*
+
+**COSA HO CAPITO**
+
+Si, è così, ma il template non credo possa essere customizzato dall'utente. 
+
+https://blog.angular-university.io/angular-ng-template-ng-container-ngtemplateoutlet/
+Trovato un buon tutorial qui.
