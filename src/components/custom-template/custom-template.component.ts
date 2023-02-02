@@ -14,6 +14,13 @@ export class CustomTemplateComponent implements OnInit {
 
   ctx = {estimate: this.totalEstimate};
 
+  remadeCtx = {
+    old: this.ctx,
+    actual: {
+      greet: 'ciao'
+    }
+  }
+
   constructor() { 
     this.chnageLessonsNumber()
   }

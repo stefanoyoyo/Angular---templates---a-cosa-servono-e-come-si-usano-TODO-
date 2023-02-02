@@ -2,10 +2,23 @@
 custom-template works!
 </p>
 
-<ng-template #estimateTemplate let-lessonsCounter="estimate">
-<div> Approximately {{lessonsCounter}} lessons ...</div>
-</ng-template>
-
+<!-- Template 1 -->
 <ng-container 
 *ngTemplateOutlet="estimateTemplate;context:ctx">
 </ng-container>
+
+<ng-template #estimateTemplate let-lessonsCounter="estimate">
+PRIMO TEMPLATE
+<div> Approximately {{lessonsCounter}} lessons ...</div>
+</ng-template>
+
+<!-- Template 2 -->
+<ng-container 
+*ngTemplateOutlet="estimateTemplateAgain;context:remadeCtx">
+</ng-container>
+
+<ng-template #estimateTemplateAgain let-lessonsCounter="old.estimate">
+<br/>
+SECONDO TEMPLATE
+<div> Approximately {{lessonsCounter}} lessons ...</div>
+</ng-template>
