@@ -14,7 +14,9 @@ import { CustomTemplateComponent } from './components/custom-template/custom-tem
       Learn more about Angular 
     </a>
     
-    <app-custom-template></app-custom-template>
+    <app-custom-template>
+      <ng-template #myDogTemplate let-dogName="'pio'"></ng-template>
+    </app-custom-template>
   `,
 })
 export class App {
