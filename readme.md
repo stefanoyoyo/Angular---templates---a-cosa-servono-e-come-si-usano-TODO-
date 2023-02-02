@@ -27,3 +27,19 @@ Si, è così, ma il template non credo possa essere customizzato dall'utente.
 
 https://blog.angular-university.io/angular-ng-template-ng-container-ngtemplateoutlet/
 Trovato un buon tutorial qui.
+
+*Esempio pratico*
+@Component({
+  selector: 'app-root',
+  template: `      
+<ng-template #estimateTemplate let-lessonsCounter="estimate">
+    <div> Approximately {{lessonsCounter}} lessons ...</div>
+</ng-template>
+<ng-container 
+   *ngTemplateOutlet="estimateTemplate;context:ctx">
+</ng-container>
+`})
+export class AppComponent {
+    totalEstimate = 10;
+    ctx = {estimate: this.totalEstimate};
+}
